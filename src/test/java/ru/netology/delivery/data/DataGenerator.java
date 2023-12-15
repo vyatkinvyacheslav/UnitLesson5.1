@@ -27,6 +27,8 @@ public class DataGenerator {
 
     public static String generateName(String locale) {
         var faker = new Faker(new Locale(locale));
+        Object LastName;
+        LastName = Faker.Name.Last();
         return faker.name().lastName + " " + faker.name().firstName();
     }
 
@@ -49,6 +51,15 @@ public class DataGenerator {
         String city;
         String name;
         String phone;
+
+        public String getCity() {
+        }
+
+        public String getPhone() {
+        }
+
+        public String getName() {
+        }
     }
 }
 

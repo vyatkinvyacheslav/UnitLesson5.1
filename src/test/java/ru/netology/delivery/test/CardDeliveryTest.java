@@ -15,7 +15,7 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import ru.netology.delivery.data.DataGenerator.faker;
+
 
 public class CardDeliveryTest {
 

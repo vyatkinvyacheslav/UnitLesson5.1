@@ -25,7 +25,8 @@ public class CardDeliveryTest {
         open("http://localhost:9999");
 
     }
-    
+
+
 
     @Test
     @DisplayName("Should successful plan meeting")

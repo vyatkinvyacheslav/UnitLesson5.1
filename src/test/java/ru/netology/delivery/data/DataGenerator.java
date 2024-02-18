@@ -9,7 +9,6 @@ import java.util.Locale;
 import java.util.Random;
 
 public class DataGenerator {
-    //public static Faker faker = new Faker(new Locale("ru"));
 
     private DataGenerator() {
 
@@ -30,12 +29,16 @@ public class DataGenerator {
     public static String generateName(String locale) {
         var faker = new Faker(new Locale(locale));
         return faker.name().lastName() + " " + faker.name().firstName();
-
     }
 
     public static String generatePhone(String locale) {
         var faker = new Faker(new Locale(locale));
         return faker.phoneNumber().phoneNumber();
+    }
+
+    public static String generateWrongPhone(String locale) {
+        var faker = new Faker(new Locale(locale));
+        return faker.numerify("####");
     }
 
     public static class Registration {
@@ -45,7 +48,6 @@ public class DataGenerator {
         public static UserInfo generateUser(String locale) {
             return new UserInfo(generateCity(), generateName(locale), generatePhone(locale));
         }
-
     }
 
     @Value
